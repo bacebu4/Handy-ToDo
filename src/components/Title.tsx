@@ -1,25 +1,19 @@
-import React, { FunctionComponent, useEffect, useRef } from 'react';
+import React, { FunctionComponent } from 'react';
 import '../App.css';
-import { annotate } from 'rough-notation';
-import { RoughAnnotation } from 'rough-notation/lib/model';
+import { Annotate } from './Annotate';
 
 type TitleProps = {
   isHighlighted?: boolean,
 }
 
 export const Title: FunctionComponent<TitleProps> = ({children, isHighlighted}) => {
-  const note = useRef<HTMLHeadingElement>(null)
-  let annotation: RoughAnnotation;
-
-  useEffect(() => {
-    if (isHighlighted) {
-      // eslint-disable-next-line 
-      annotation = annotate(note.current!, { type: 'highlight', color: '#FFF176' })
-      annotation.show()
-    }
-  }, [note])
-
   return (
-    <h1 ref={note}>{children}</h1>
+    <>
+    {isHighlighted ? (<>
+      <h1><Annotate type="highlight">{children}</Annotate></h1>
+    </>) : (<>
+      <h1>{children}</h1>
+    </>)}
+    </>
   );
 }

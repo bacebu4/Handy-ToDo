@@ -7,8 +7,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="wrapper">
-          <Title>Hello</Title>
           <Title isHighlighted>Hello</Title>
+          <Title isHighlighted>Hello but longer</Title>
         </div>
       </header>
     </div>
