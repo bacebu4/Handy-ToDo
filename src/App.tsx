@@ -8,10 +8,10 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Wrapper display="flex">
+      {/* <Wrapper display="flex">
         <Title>Hello</Title>
         <Title ml={32}>Hello but longer</Title>
-      </Wrapper>
+      </Wrapper> */}
     </div>
   );
 }
