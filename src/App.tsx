@@ -7,7 +7,7 @@ import { Wrapper } from './components/grid/Wrapper';
 function App() {
   return (
     <div className="App">
-      <Header></Header>
+      <Header />
       <Wrapper display="flex">
         <Title>Hello</Title>
         <Title ml={32}>Hello but longer</Title>
