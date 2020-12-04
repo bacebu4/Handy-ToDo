@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 import { Header } from './components/Header';
-import { Title } from './components/Title';
 import { Wrapper } from './components/grid/Wrapper';
+import { DayCard } from './components/DayCard';
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
         <Title>Hello</Title>
         <Title ml={32}>Hello but longer</Title>
       </Wrapper> */}
+      <Wrapper px={64}><DayCard /></Wrapper>
     </div>
   );
 }

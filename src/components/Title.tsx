@@ -4,16 +4,18 @@ import { Annotate } from './Annotate';
 
 type TitleProps = {
   mt?: number, 
-  ml?: number, 
+  ml?: number,
+  isToday?: boolean 
 }
 
-export const Title: FunctionComponent<TitleProps> = ({children, mt, ml}) => {
+export const Title: FunctionComponent<TitleProps> = ({children, mt, ml, isToday = false}) => {
   return (
     <>
     <h1 style={{
       marginTop: mt,
-      marginLeft: ml
-    }}><Annotate type="highlight">{children}</Annotate></h1>
+      marginLeft: ml,
+      marginBottom: 16,
+    }}><Annotate type={isToday ? "highlight" : "none"}>{children}</Annotate></h1>
     </>
   );
 }

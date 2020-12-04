@@ -9,7 +9,7 @@ export const Header: FunctionComponent = () => {
       <Annotate type='highlight'>
         <h2>Handy ToDo</h2>
       </Annotate>
-      <a href="https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md">Login</a>
+      <span style={{fontWeight: 'bold', color: "#0D47A1", cursor: "pointer"}}>Login</span>
     </Wrapper>
   );
 }
