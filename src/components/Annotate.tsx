@@ -2,6 +2,7 @@ import React, { FunctionComponent, useEffect, useRef } from 'react';
 import '../App.css';
 import { annotate } from 'rough-notation';
 import { RoughAnnotation } from 'rough-notation/lib/model';
+import { yellow, red } from '../colors';
 
 type AnnotateProps = {
   type: 'highlight' | 'crossed-off';
@@ -10,10 +11,10 @@ type AnnotateProps = {
 const colorPicker = (type: 'highlight' | 'crossed-off') => {
   switch (type) {
     case 'highlight':
-      return '#FFF176'
+      return yellow
   
     case 'crossed-off':
-      return '#F57F16'
+      return red
   }
 }
 

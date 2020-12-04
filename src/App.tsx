@@ -1,16 +1,17 @@
 import React from 'react';
 import './App.css';
+import { Header } from './components/Header';
 import { Title } from './components/Title';
+import { Wrapper } from './components/grid/Wrapper';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <div className="wrapper">
-          <Title isHighlighted>Hello</Title>
-          <Title isHighlighted>Hello but longer</Title>
-        </div>
-      </header>
+      <Header></Header>
+      <Wrapper display="flex">
+        <Title>Hello</Title>
+        <Title ml={32}>Hello but longer</Title>
+      </Wrapper>
     </div>
   );
 }

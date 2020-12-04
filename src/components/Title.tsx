@@ -3,17 +3,17 @@ import '../App.css';
 import { Annotate } from './Annotate';
 
 type TitleProps = {
-  isHighlighted?: boolean,
+  mt?: number, 
+  ml?: number, 
 }
 
-export const Title: FunctionComponent<TitleProps> = ({children, isHighlighted}) => {
+export const Title: FunctionComponent<TitleProps> = ({children, mt, ml}) => {
   return (
     <>
-    {isHighlighted ? (<>
-      <h1><Annotate type="highlight">{children}</Annotate></h1>
-    </>) : (<>
-      <h1>{children}</h1>
-    </>)}
+    <h1 style={{
+      marginTop: mt,
+      marginLeft: ml
+    }}><Annotate type="highlight">{children}</Annotate></h1>
     </>
   );
 }
